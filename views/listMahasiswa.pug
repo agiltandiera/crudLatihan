@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h3= title
+  table.table.table-striped
+    tr 
+      td  
+       | ID 
+      td 
+        | NIM
+      td 
+        | NAMA
+      td 
+        | AKSI
+    each val, index in data 
+      tr 
+        td=val.id
+        td=val.nim
+        td=val.nama
+        td  
+            a.btn.btn-primary(href='/mahasiswa/' + val.id + '/edit') 
+                | edit
+            a.btn.btn-danger(href='/mahasiswa/' + val.id + '/hapus') 
+                | hapus
+
+  a.btn.btn-outline-success(href="/mahasiswa/tambah",role="button")
+    h7 tambah

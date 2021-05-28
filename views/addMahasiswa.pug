@@ -1,0 +1,11 @@
+extends layout
+
+block content 
+  h3=title 
+  .container
+    form(method='POST') 
+        input(type='text', name='nim' placeholder='Masukan NIM')
+        input(type='text', name='nama' placeholder='Masukan Nama Lengkap')
+        //- input(type='submit', name='simpan')
+        button.btn.btn-outline-success(type='Submit')  Simpan 
+    

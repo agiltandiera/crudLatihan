@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+  h3=title 
+  .container
+  form(action='/mahasiswa/' + data.id + '/edit'  method='POST')
+        input(type='text', name='nim', value=data.nim) 
+        input(type='text', name='nama', value=data.nama)
+        input(type='submit', name='simpan')
+
+    
+
+        
+        

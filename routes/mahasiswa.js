@@ -16,11 +16,11 @@ router.get('/', function (req, res, next) {
 });
 
 //CREATE MAHASISWA
-router.get('/tambah', (req, res, next) => {
+router.get('/add', (req, res, next) => {
   res.render('addMahasiswa', { title: 'Tambah Mahasiswa' })
 })
 
-router.post('/tambah', (req, res) => {
+router.post('/add', (req, res) => {
   Mahasiswa.insertIntoMahasiswa(req.body, (err, result) => {
     if (err)
       console.log(err)
@@ -58,7 +58,7 @@ router.post('/:id/edit', (req, res) => {
 })
 
 //DELETE MAHASISWA
-router.get('/:id/hapus', (req, res) => {
+router.get('/:id/delete', (req, res) => {
   Mahasiswa.deleteMahasiswa(req.params.id, (err, result) => {
     res.redirect('/mahasiswa')
   })
